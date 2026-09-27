@@ -1,8 +1,8 @@
-🚀 Data Structures & Algorithms in Java (ads-java-fundamentals)
+## Data Structures & Algorithms in Java (ads-java-fundamentals)
 
 Welcome to the Data Structures and Algorithms repository! This project serves as a structured collection of core DSA implementations in Java, complete with step-by-step dry runs and line-by-line conceptual explanations designed to strengthen fundamental computer science concepts.
 
-📌 Repository Purpose
+## Repository Purpose
 
 Understanding Data Structures and Algorithms isn't just about memorizing code; it's about mastering how memory, execution, and logic work together.
 
@@ -14,7 +14,7 @@ Dry Runs: Step-by-step trace tables and variable tracking to understand executio
 
 Time & Space Complexity: Big-O analysis for every algorithm and data structure.
 
-📂 Structure & Contents
+## Structure & Contents
 
 ├── Data-Structures/
 │   ├── Arrays/
@@ -30,7 +30,7 @@ Time & Space Complexity: Big-O analysis for every algorithm and data structure.
 └── README.md
 
 
-🛠️ Topics Covered
+## Topics Covered
 
 1. Data Structures
 
@@ -60,7 +60,7 @@ Time & Space Complexity: Big-O analysis for every algorithm and data structure.
 
 [ ] Dynamic Programming: Knapsack, LCS, LIS
 
-✍️ Code Format & Dry Run Example
+## Code Format & Dry Run Example
 
 Every code file includes a structured comment header explaining the logic, time/space complexity, and a dry-run trace:
 
@@ -93,7 +93,7 @@ public class BinarySearch {
 }
 
 
-💻 How to Run
+## How to Run
 
 Clone the repository:
 
@@ -111,7 +111,7 @@ javac Algorithms/Searching/BinarySearch.java
 java Algorithms.Searching.BinarySearch
 
 
-🌟 Goals & Roadmap
+## Goals & Roadmap
 
 [x] Set up repository structure.
 
@@ -123,6 +123,6 @@ java Algorithms.Searching.BinarySearch
 
 [ ] Solve and document standard interview/concept problems.
 
-🤝 Contributing & Feedback
+## Contributing & Feedback
 
 Suggestions, corrections, and alternate implementations (e.g., recursive vs. iterative) are welcome! Feel free to open an issue or submit a pull request.
