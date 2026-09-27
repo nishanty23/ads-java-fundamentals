@@ -1,128 +1,292 @@
-## Data Structures & Algorithms in Java (ads-java-fundamentals)
+# Data Structures & Algorithms in Java
 
-Welcome to the Data Structures and Algorithms repository! This project serves as a structured collection of core DSA implementations in Java, complete with step-by-step dry runs and line-by-line conceptual explanations designed to strengthen fundamental computer science concepts.
+### `ads-java-fundamentals`
 
-## Repository Purpose
+A structured collection of **Data Structures and Algorithms implemented in Java**, with a focus on understanding the logic behind the code rather than simply solving problems.
 
-Understanding Data Structures and Algorithms isn't just about memorizing code; it's about mastering how memory, execution, and logic work together.
+Each implementation is accompanied by **dry runs, complexity analysis, and execution-flow explanations** to make the learning process easier to follow.
 
-This repository focuses on:
+---
 
-Core Concepts: Clear, un-bloated Java implementations of essential algorithms.
+## Repository Overview
 
-Dry Runs: Step-by-step trace tables and variable tracking to understand execution flow.
+| Area                | Focus                                                                              |
+| ------------------- | ---------------------------------------------------------------------------------- |
+| **Data Structures** | Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Heaps, Hash Tables            |
+| **Algorithms**      | Searching, Sorting, Recursion, Backtracking, Graph Algorithms, Dynamic Programming |
+| **Analysis**        | Time Complexity, Space Complexity, Big-O                                           |
+| **Documentation**   | Dry runs, variable tracking, execution flow                                        |
+| **Language**        | Java                                                                               |
 
-Time & Space Complexity: Big-O analysis for every algorithm and data structure.
+---
 
-## Structure & Contents
+## Why This Repository?
 
+DSA is not just about writing code that produces the correct output.
+
+The goal of this repository is to understand:
+
+```text
+Input
+  ↓
+Data Structure
+  ↓
+Algorithm
+  ↓
+Execution Flow
+  ↓
+Output
+```
+
+For each topic, the focus is on understanding **what happens inside the program**, how variables change during execution, and how the choice of an algorithm affects performance.
+
+---
+
+## Contents
+
+```text
+ads-java-fundamentals/
+│
 ├── Data-Structures/
 │   ├── Arrays/
 │   ├── LinkedLists/
 │   ├── StacksAndQueues/
 │   ├── Trees/
 │   └── Graphs/
+│
 ├── Algorithms/
 │   ├── Searching/
 │   ├── Sorting/
 │   ├── Recursion-Backtracking/
 │   └── DynamicProgramming/
+│
 └── README.md
+```
 
+---
 
-## Topics Covered
+## Data Structures
 
-1. Data Structures
+| Status | Topic                   |
+| :----: | ----------------------- |
+|   [ ]  | Arrays & Strings        |
+|   [ ]  | Singly Linked Lists     |
+|   [ ]  | Doubly Linked Lists     |
+|   [ ]  | Circular Linked Lists   |
+|   [ ]  | Stacks                  |
+|   [ ]  | Queues                  |
+|   [ ]  | Binary Trees            |
+|   [ ]  | Binary Search Trees     |
+|   [ ]  | AVL Trees               |
+|   [ ]  | Graphs                  |
+|   [ ]  | Heaps & Priority Queues |
+|   [ ]  | Hash Tables             |
 
-[ ] Arrays & Strings
+---
 
-[ ] Linked Lists (Singly, Doubly, Circular)
+## Algorithms
 
-[ ] Stacks & Queues (Array & LL Implementations)
+### Searching
 
-[ ] Trees (Binary Trees, BST, AVL)
+* [ ] Linear Search
+* [ ] Binary Search
+* [ ] Ternary Search
 
-[ ] Graphs (Adjacency Matrix & List)
+### Sorting
 
-[ ] Heaps & Priority Queues
+* [ ] Bubble Sort
+* [ ] Selection Sort
+* [ ] Insertion Sort
+* [ ] Merge Sort
+* [ ] Quick Sort
+* [ ] Heap Sort
 
-[ ] Hash Tables
+### Recursion & Backtracking
 
-2. Core Algorithms
+* [ ] Recursion Fundamentals
+* [ ] Subsets
+* [ ] Permutations
+* [ ] N-Queens
 
-[ ] Searching: Binary Search, Linear Search, Ternary Search
+### Graph Algorithms
 
-[ ] Sorting: Bubble, Selection, Insertion, Merge Sort, Quick Sort, Heap Sort
+* [ ] Breadth-First Search
+* [ ] Depth-First Search
+* [ ] Dijkstra's Algorithm
+* [ ] Kruskal's Algorithm
+* [ ] Prim's Algorithm
 
-[ ] Recursion & Backtracking: N-Queens, Subsets, Permutations
+### Dynamic Programming
 
-[ ] Graph Algorithms: BFS, DFS, Dijkstra's, Kruskal's, Prim's
+* [ ] 0/1 Knapsack
+* [ ] Longest Common Subsequence
+* [ ] Longest Increasing Subsequence
 
-[ ] Dynamic Programming: Knapsack, LCS, LIS
+---
 
-## Code Format & Dry Run Example
+## Code Documentation
 
-Every code file includes a structured comment header explaining the logic, time/space complexity, and a dry-run trace:
+The implementations are kept intentionally straightforward so that the algorithm remains easy to read.
 
+Where applicable, each implementation contains:
+
+* Problem description
+* Approach
+* Time complexity
+* Space complexity
+* Dry-run trace
+* Important variable changes
+
+### Example
+
+```java
 /**
  * Problem: Binary Search (Iterative)
+ *
  * Time Complexity: O(log N)
  * Space Complexity: O(1)
  *
- * DRY RUN TRACE:
- * Array: [2, 4, 6, 8, 10, 12], Target: 10
- * 
- * Pass 1: low = 0, high = 5 -> mid = 2 (val = 6)  -> 6 < 10 -> low = mid + 1 = 3
- * Pass 2: low = 3, high = 5 -> mid = 4 (val = 10) -> 10 == 10 -> Return Index 4
+ * DRY RUN:
+ * Array = [2, 4, 6, 8, 10, 12]
+ * Target = 10
+ *
+ * Pass 1:
+ * low = 0, high = 5
+ * mid = 2
+ * arr[mid] = 6
+ * 6 < 10 → low = 3
+ *
+ * Pass 2:
+ * low = 3, high = 5
+ * mid = 4
+ * arr[mid] = 10
+ * 10 == 10 → return 4
  */
+```
 
-public class BinarySearch {
-    public static int binarySearch(int[] arr, int target) {
-        int low = 0, high = arr.length - 1;
-        
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            
-            if (arr[mid] == target) return mid;
-            if (arr[mid] < target) low = mid + 1;
-            else high = mid - 1;
-        }
-        
-        return -1;
-    }
-}
+The idea is to make the code understandable even when revisiting it later without needing to reconstruct the algorithm from scratch.
 
+---
 
-## How to Run
+## Complexity Reference
 
-Clone the repository:
+A major part of the repository is understanding how algorithms scale as the input grows.
 
+| Complexity   | Example                  |
+| ------------ | ------------------------ |
+| `O(1)`       | Array access             |
+| `O(log n)`   | Binary Search            |
+| `O(n)`       | Linear Search            |
+| `O(n log n)` | Merge Sort               |
+| `O(n²)`      | Bubble Sort              |
+| `O(2ⁿ)`      | Some recursive solutions |
+
+The implementations are accompanied by complexity analysis wherever it is relevant.
+
+---
+
+## Running the Code
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/nishanty23/ads-java-fundamentals.git
+```
 
+### 2. Navigate to the project
 
-Navigate to the directory:
-
+```bash
 cd ads-java-fundamentals
+```
 
+### 3. Compile a Java file
 
-Compile and run any Java file:
-
+```bash
 javac Algorithms/Searching/BinarySearch.java
+```
+
+### 4. Run the program
+
+```bash
 java Algorithms.Searching.BinarySearch
+```
 
+The exact command may vary depending on the package declaration and directory structure of the Java file.
 
-## Goals & Roadmap
+---
 
-[x] Set up repository structure.
+## Roadmap
 
-[ ] Implement fundamental searching and sorting algorithms with dry runs.
+### Foundation
 
-[ ] Add linear data structures (LinkedLists, Stacks, Queues).
+* [x] Set up repository structure
+* [ ] Implement fundamental searching algorithms
+* [ ] Implement fundamental sorting algorithms
+* [ ] Document dry runs and complexity analysis
 
-[ ] Add non-linear data structures (Trees, Graphs).
+### Data Structures
 
-[ ] Solve and document standard interview/concept problems.
+* [ ] Linked Lists
+* [ ] Stacks
+* [ ] Queues
+* [ ] Trees
+* [ ] Graphs
+* [ ] Heaps
+* [ ] Hash Tables
 
-## Contributing & Feedback
+### Problem Solving
 
-Suggestions, corrections, and alternate implementations (e.g., recursive vs. iterative) are welcome! Feel free to open an issue or submit a pull request.
+* [ ] Recursion & Backtracking
+* [ ] Standard interview problems
+* [ ] Dynamic Programming
+* [ ] Graph-based problems
+* [ ] Alternative implementations and approaches
+
+---
+
+## Learning Approach
+
+The repository follows a simple pattern:
+
+```text
+Learn the concept
+      ↓
+Implement it
+      ↓
+Dry run the implementation
+      ↓
+Analyze complexity
+      ↓
+Solve variations of the problem
+```
+
+This keeps the repository focused on **understanding DSA through implementation**, rather than collecting solutions without context.
+
+---
+
+## Feedback
+
+If you find an issue, a better implementation, or an interesting alternative approach, feel free to open an issue or submit a pull request.
+
+Different approaches are especially useful when they demonstrate a meaningful trade-off, such as:
+
+```text
+Iterative  ↔  Recursive
+Time       ↔  Space
+Simplicity ↔  Optimization
+```
+
+---
+
+## Author
+
+**Nishant Yadav**
+
+Computer Science Engineering
+Focused on software development, problem solving, and building a strong foundation in computer science.
+
+---
+
+<p align="center">
+  <sub>Built while learning, implementing, and revisiting the fundamentals of DSA.</sub>
+</p>
