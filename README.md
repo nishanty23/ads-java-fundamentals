@@ -1,6 +1,3 @@
-# ads-java-fundamentals
-Java implementations and step-by-step dry runs of fundamental Data Structures and Algorithms designed to build core CS concepts.
-
 🚀 Data Structures & Algorithms in Java (ads-java-fundamentals)
 
 Welcome to the Data Structures and Algorithms repository! This project serves as a structured collection of core DSA implementations in Java, complete with step-by-step dry runs and line-by-line conceptual explanations designed to strengthen fundamental computer science concepts.
